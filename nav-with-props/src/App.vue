@@ -1,13 +1,17 @@
 <template>
   <div id="app">
-    <Navigation :icon="gradesOrStudent" :links="classesOrStudents"/>
+    <div v-if="!isAdvisor">
+      <GuardianView />
+    </div>
+    <div v-if="isAdvisor">
+      <TeacherView />
+    </div>
   </div>
 </template>
 
 <script>
-import Navigation from './components/Navigation.vue'
-import gradeIcon from './assets/grades.png';
-import studentIcon from './assets/students.png';
+import GuardianView from './components/GuardianView.vue';
+import TeacherView from './components/TeacherView.vue';
 
 export default {
   name: 'app',
@@ -19,16 +23,9 @@ export default {
     }
   },
   components: {
-    Navigation
+    GuardianView,
+    TeacherView,
   },
-  computed: {
-    classesOrStudents() {
-      return this.user.isAdvisor ? ['Art History', 'Modern Art Appreciation', 'Ceramics 2'] : ['Jeff', 'Jim', 'Bobbert'];
-    },
-    gradesOrStudent() {
-      return this.user.isAdvisor ? gradeIcon : studentIcon;
-    }
-  }
 }
 </script>
 
@@ -38,7 +35,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
   margin-top: 60px;
 }
 </style>
