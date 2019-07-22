@@ -6,6 +6,12 @@
         <div v-for="className in classes" :key="className">
           <a href="google.com"><img class="icon" :src="gradesIcon"/>{{className}}</a>
         </div>
+        <select>
+          <option selected disabled>Change View</option>
+          <option>Classes</option>
+          <option>Grade Level</option>
+          <option>Student Names</option>
+        </select>
       </template>
     </Navigation>
     <div>

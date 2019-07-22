@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navigation :links="students" :icon="studentsIcon" :logo="guardianIcon"/>
+    <Navigation :links="students" :icon="studentsIcon" :isTeacher="isTeacher"/>
     <div>
       <h3>I'm a guardian and I can see my kids' grades here.</h3>
     </div>
@@ -9,15 +9,14 @@
 <script>
 import Navigation from './Navigation.vue';
 import studentsIcon from '../assets/students.png';
-import guardianIcon from '../assets/school.png';
 
 export default {
   name: 'GuardianView',
+  props: ['isTeacher'],
   data() {
     return {
       students: ['Bob', 'Jenny', 'Ty'],
       studentsIcon,
-      guardianIcon,
     }
   },
   components: {

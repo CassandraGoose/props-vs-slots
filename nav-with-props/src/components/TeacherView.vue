@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navigation :links="classes" :icon="gradesIcon" :logo="teacherIcon"/>
+    <Navigation :links="classes" :icon="gradesIcon" :isTeacher="isTeacher"/>
     <div>
       <h3>I'm a teacher and I will grade my students here.</h3>
     </div>
@@ -9,15 +9,14 @@
 <script>
 import Navigation from './Navigation.vue';
 import gradesIcon from '../assets/grades.png';
-import teacherIcon from '../assets/teacher.png';
 
 export default {
   name: 'TeacherView',
+  props: ['isTeacher'],
   data() {
     return {
       classes: ['Art History', 'Modern Art Appreciation', 'Ceramics 2'],
       gradesIcon,
-      teacherIcon,
     }
   },
   components: {

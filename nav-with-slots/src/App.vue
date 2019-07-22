@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <div v-if="!isAdvisor">
+    <div v-if="!isTeacher">
       <GuardianView />
     </div>
-    <div v-if="isAdvisor">
+    <div v-if="isTeacher">
       <TeacherView />
     </div>
   </div>
@@ -18,7 +18,7 @@ export default {
   name: 'app',
   data() {
     return {
-      isAdvisor: true,
+      isTeacher: false,
     }
   },
   components: {
