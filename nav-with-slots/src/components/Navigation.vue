@@ -1,7 +1,7 @@
 <template>
   <nav class="navigation">
     <slot name="logo"></slot>
-    <slot name="links"></slot>
+    <slot></slot>
   </nav>
 </template>
 

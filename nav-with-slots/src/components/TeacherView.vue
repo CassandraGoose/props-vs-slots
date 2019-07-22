@@ -1,6 +1,13 @@
 <template>
   <div>
-    <Navigation :links="classes" :icon="gradesIcon" :logo="teacherIcon"/>
+    <Navigation>
+      <template v-slot:logo><img class="logo" :src="teacherIcon"></template>
+      <template>
+        <div v-for="className in classes" :key="className">
+          <a href="google.com"><img class="icon" :src="gradesIcon"/>{{className}}</a>
+        </div>
+      </template>
+    </Navigation>
     <div>
       <h3>I'm a teacher and I will grade my students here.</h3>
     </div>
@@ -25,3 +32,15 @@ export default {
   }
 }
 </script>
+<style>
+  .icon {
+    width: 25px;
+    height: auto;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+  }
+</style>
+

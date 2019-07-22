@@ -17,9 +17,7 @@ export default {
   name: 'app',
   data() {
     return {
-      user: {
-        isAdvisor: false,
-      }
+      isAdvisor: true,
     }
   },
   components: {
