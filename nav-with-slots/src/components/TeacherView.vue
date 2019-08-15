@@ -1,10 +1,15 @@
 <template>
   <div>
     <Navigation>
-      <template v-slot:logo><img class="logo" :src="teacherIcon"></template>
+      <template v-slot:logo>
+        <img class="logo" :src="teacherIcon">
+      </template>
       <template>
         <div v-for="className in classes" :key="className">
-          <a href="google.com"><img class="icon" :src="gradesIcon"/>{{className}}</a>
+          <a href="google.com">
+            <img class="icon" :src="gradesIcon"/>
+              {{className}}
+          </a>
         </div>
         <select>
           <option selected disabled>Change View</option>

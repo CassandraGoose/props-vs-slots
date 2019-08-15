@@ -18,7 +18,7 @@ export default {
   name: 'app',
   data() {
     return {
-      isTeacher: false,
+      isTeacher: true,
     }
   },
   components: {

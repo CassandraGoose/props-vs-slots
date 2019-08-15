@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div v-if="!isTeacher">
-      <GuardianView :isTeacher="isTeacher"/>
+      <GuardianView :isTeacher="isTeacher" />
     </div>
     <div v-if="isTeacher">
       <TeacherView :isTeacher="isTeacher" />
@@ -17,7 +17,7 @@ export default {
   name: 'app',
   data() {
     return {
-      isTeacher: false,
+      isTeacher: true,
     }
   },
   components: {

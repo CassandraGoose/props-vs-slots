@@ -1,29 +1,11 @@
-# nav-with-props
+# Comparison of a Navigation Component with Props vs a Navigation Component with Slots
 
-## Project setup
-```
-npm install
-```
+## To Run
+- `cd` into both projects
+- `npm i` in both
+- run `npm run serve` in both
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Compare and Contrast Each!
 
-### Compiles and minifies for production
-```
-npm run build
-```
+I like slots in this case because the Navigation component has so much less logic in it. Also, logic about teachers lives in the file that is called TeacherView and logic about the guardians lives in the GuardianView. 🤷‍♀️ My brain likes that.
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
